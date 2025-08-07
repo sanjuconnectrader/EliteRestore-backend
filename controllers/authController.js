@@ -34,7 +34,7 @@ export const register = async (req, res, next) => {
     /* ------------- Send approval request ------------- */
     const supportMail = {
       from: '"Connectrader" <no-reply@connectrader.com>',
-      to:   'sanjiths513@gmail.com',
+      to:   'connect@connectrader.com',
       subject: `Manual approval needed: ${email}`,
       html: `
 <!DOCTYPE html>
