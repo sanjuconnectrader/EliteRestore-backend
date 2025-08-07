@@ -22,9 +22,9 @@ export const requestReset = async (req, res, next) => {
     await admin.update({ resetOTP: otp, resetOTPExpires: expires });
 
     await transporter.sendMail({
-      from: `"Moyer Production" <${process.env.EMAIL_USER}>`,
+      from: `"Elite-Restore" <${process.env.EMAIL_USER}>`,
       to: admin.email,
-      subject: 'Your Password Reset Code - Moyer Production',
+      subject: 'Your Password Reset Code - Elite Restore',
       html: generateResetEmailTemplate(admin.adminName, otp)
     });
 
